@@ -1,5 +1,7 @@
 declare -a repeatedArray
 countArray=0
+
+function repeatedNo(){
 for ((counter=10 ; counter < 100 ; counter++ ))
 do
     if [ $((counter%10)) -eq   $(((counter/10)%10)) ]
@@ -11,3 +13,6 @@ do
 done
 
 echo "Repeated number is ${repeatedArray[@]} "
+}
+
+repeatedNo
